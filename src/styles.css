@@ -8,14 +8,65 @@ HEX : #10c0c6
 RGB : 16, 192, 198
 HSL  : 181, 85%, 41%                          
 */
+html {
+    overflow-x: hidden;
+  }
 body {
     overflow-y: hidden;
     height: 100%;
     font-size: 14px;
     font-family: Lato;
     line-height: normal;
-}
+    background: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: "Lato", roboto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-font-smoothing: subpixel-antialiased;
+    color: #212121;
+    line-height: 25px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow-x: hidden;
+  }
 
+  a {
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+  }
+ 
+  a:hover {
+    text-decoration: none;
+  }
+  
+  a a:focus {
+    outline: none;
+  }
+  
+  p {
+    font-weight: 400;
+    font-family: "Lato", sans-serif;
+    margin: 0px;
+    font-size: 14px;
+  }
+  
+  ul,
+  ol {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+    font-size:14px;
+  }
+  
+  ul li,
+  ol li {
+    list-style: none;
+  }
+/* -------------------------------------------------*/  
 
 .navbar-brand {
     position: relative;
@@ -23,7 +74,7 @@ body {
   }
   
   .navbar-brand img {
-    width: 75%;
+    width: 35%;
   }
   
   .top-nav-collapse {
@@ -62,7 +113,7 @@ body {
   }
   
   .navbar-expand-lg .navbar-nav .nav-link {
-    color: #fff;
+    color: #10c0c6;
     padding: 0 15px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -84,25 +135,9 @@ body {
     width: 15px;
     height: 2px;
     background: #10c0c6;
-    -webkit-transform: scale3d(0, 1, 1);
-    -moz-transform: scale3d(0, 1, 1);
-    transform: scale3d(0, 1, 1);
-    -webkit-transition: -webkit-transform 0.1s;
-    -moz-transition: -webkit-transform 0.1s;
-    transition: transform 0.1s;
+    
   }
   
-  .navbar-expand-lg .navbar-nav .active a:before {
-    -webkit-transform: scale3d(1, 1, 1);
-    -moz-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    -moz-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    -webkit-transition-duration: 0.3s;
-    -moz-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-  }
   
   .navbar-expand-lg .navbar-nav li a:hover,
   .navbar-expand-lg .navbar-nav li .active > a,
@@ -113,7 +148,8 @@ body {
   
   .navbar-expand-lg .navbar-nav .nav-link:focus,
   .navbar-expand-lg .navbar-nav .nav-link:hover {
-    color: #10c0c6 !important;
+    color: #54595F!important;
+
   }
   
   .navbar {
@@ -123,3 +159,46 @@ body {
   .navbar li.active a.nav-link {
     color: #10c0c6 !important;
   }
+
+
+
+
+
+  /*--e-global-color-primary: #10C0C6;
+    --e-global-color-secondary: #54595F;
+    --e-global-color-text: #7A7A7A;
+    --e-global-color-accent: #26CAB2;
+    --e-global-color-25f4098b: #10C0C6;
+    --e-global-color-b4e9393: #26CAB2;
+    --e-global-color-5432996b: #2D2D2D;
+    --e-global-color-3d573303: #815AE8;
+    --e-global-color-21280702: #9278F4;
+    --e-global-color-7f4f3dbb: #ED4581;
+    --e-global-color-43ac51ca: #F766A1;
+    --e-global-color-e740a57: #03B6EB;
+    --e-global-color-696ef79e: #0DC8FF;
+    --e-global-color-7c4c78ed: #FCBD1F;
+    --e-global-color-3b2cdbe0: #FFD364;
+    --e-global-color-126260d7: #D15130;
+    --e-global-color-e40fd0c: #E05F3E;
+    --e-global-color-212615ee: #314A61;
+    --e-global-color-145f385c: #456888;
+    --e-global-color-734ddeae: #FFFFFF;
+    --e-global-color-326b6534: #F1F1F1;
+    --e-global-color-5c56f4ea: #DEDEDE;
+    --e-global-color-51fd2198: #636969;
+    --e-global-color-2e9f661d: #000000;
+    --e-global-typography-primary-font-family: "Roboto";
+    --e-global-typography-primary-font-weight: 600;
+    --e-global-typography-secondary-font-family: "Roboto Slab";
+    --e-global-typography-secondary-font-weight: 400;
+    --e-global-typography-text-font-family: "Roboto";
+    --e-global-typography-text-font-weight: 400;
+    --e-global-typography-accent-font-family: "Roboto";
+    --e-global-typography-accent-font-weight: 500;
+    color: #2D2D2D;
+    font-family: "lato", Lato;
+    font-size: 16px;
+    line-height: 1.5em;
+    letter-spacing: 0px;
+}*/

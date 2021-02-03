@@ -1,6 +1,53 @@
-<app-header>
-<form class="form-inline">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-  </form>
-</app-header>
+
+
+<!--Altas                  // Baixas -->
+<!-- 
+A proposta deste desafio é a criação de uma single-page application (SPA)
+ cujo dashboard mostrará um resumo geral de como os ativos performaram 
+ recentemente. Além disso, também será possível pesquisar por um ativo 
+ em especifico e a aplicação web mostrará sua evolução histórica de preços
+  e seus respectivos eventos. Segue abaixo uma descrição mais detalhada 
+  de cada página e um possível layout para cada uma, sinta-se à vontade 
+  para criar um próprio.
+-->
+
+<!--
+A página deverá ser composta por: 
+- uma barra de pesquisa, 
+        onde será possível buscar pelos ativos disponíveis 
+- um bloco listando os ativos que tiveram alta 
+        (a última variação de preço foi positiva) e a porcentagem
+         dessa variação 
+- um bloco listando os ativos que tiveram alta 
+        (a última variação de preço foi negativa) e a porcentagem
+         dessa variação 
+- um bloco listando os últimos eventos de todos os ativos em ordem 
+  cronológica decrescente
+
+-->
+
+<!-- HEADER-->
+<app-header></app-header>
+<!-- TABLES ASSETS-->
+<div class="container">
+<div class="container-fluid" style="margin-top: 5%;">
+    <div class="row">
+        <!--ASSETS-HIGH-->
+        <div class="col-6 card table-assets">
+            <div class = "card-title">Ações em Alta</div>
+            <app-assets-low></app-assets-low>
+        </div>
+        <!--ASSETS-LOW-->
+        <div class="col-6 card table-assets">
+            <div class = "card-title">Ações em Baixa</div>
+            <app-assets-low></app-assets-low>
+        </div>
+        <!--CHARTS ASSETS-EVENTS-->
+              <div class="col-12 card">  
+            <app-assets-events></app-assets-events>
+        </div>
+    </div>
+    </div>
+    </div>
+    
+<!--FOOTER-->
