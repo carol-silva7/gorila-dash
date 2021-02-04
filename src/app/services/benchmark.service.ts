@@ -13,16 +13,16 @@ export class BenchmarkService {
   url = 'https://av7az22le1.execute-api.us-east-2.amazonaws.com/benchmarks';
 
  // injetando o HttpClient
- constructor(private httpClient: HttpClient) { }
+ constructor(private http: HttpClient) { }
 
  // Headers
  httpOptions = {
-   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+   headers: new HttpHeaders({ 'Content-Type': 'application/json','Access-Control-Allow-Origin': '*', 'Strict-origin-when-cross-origin': '*'})
  }
 
  // Obtem todos os Benchmarks
  getBenchmarks(): Observable<Benchmark[]> {
-  return this.httpClient.get<Benchmark[]>(this.url)
+  return this.http.get<Benchmark[]>(this.url)
     .pipe(
       retry(2),
       catchError(this.handleError))
@@ -30,7 +30,7 @@ export class BenchmarkService {
 
   // Obtem um Benchmark pelo id
   getBenchmarkById(id:string): Observable<Benchmark> {
-    return this.httpClient.get<Benchmark>(this.url + '/' + id)
+    return this.http.get<Benchmark>(this.url + '/' + id)
       .pipe(
         retry(2),
         catchError(this.handleError)

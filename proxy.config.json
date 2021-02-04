@@ -1,0 +1,13 @@
+
+
+{
+  "/api" : {
+    " target " :"https://av7az22le1.execute-api.us-east-2.amazonaws.com/benchmarks",
+    " secure " : true ,
+    " changeOrigin " : true,
+    "logLevel":"debug",
+    " pathRewrite " : {
+      " ^/api" : ""
+    }
+  }
+}

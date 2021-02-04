@@ -11,14 +11,14 @@ import {Asset} from '../models/asset';
 export class AssetService {
   //API lista todos os ativos disponíveis
 
-  url = 'https://av7az22le1.execute-api.us-east-2.amazonaws.com`/securities';
+  private url = 'https://av7az22le1.execute-api.us-east-2.amazonaws.com`/securities';
 
  // injetando o HttpClient
  constructor(private httpClient: HttpClient) { }
 
  // Headers
  httpOptions = {
-   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+   headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' })
  }
 
  // Obtem todos os Assets

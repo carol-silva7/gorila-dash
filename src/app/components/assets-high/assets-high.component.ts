@@ -16,15 +16,15 @@ export class AssetsHighComponent implements OnInit {
 
   constructor(private benchmarkService:BenchmarkService) { }
 
-  ngOnInit(): {
+  ngOnInit():void {
     this.getBenchmarks();
+  
   }
-
   // Chama o serviço para obtém todos os carros
   getBenchmarks() {
     this.benchmarkService.getBenchmarks().subscribe((benchmarks: Benchmark[]) => {
       this.benchmarks = benchmarks;
     });
   }
-}
 
+}
