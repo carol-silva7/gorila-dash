@@ -65,7 +65,11 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "gorila:build",
-            "proxyConfig": "./proxy.config.json"
+            "proxyConfig": "./proxy.config.json",
+            "ssl": true,
+            "sslCert": "./localhost.crt",
+            "sslKey": "./localhost.key"
+            
           },
           "configurations": {
             "production": {

@@ -9,7 +9,7 @@ import {Benchmark} from '../models/benchmark';
 })
 export class BenchmarkService {
   //API  lista todos os benchmarks disponíveis
-
+ 
   url = 'https://av7az22le1.execute-api.us-east-2.amazonaws.com/benchmarks';
 
  // injetando o HttpClient
@@ -17,8 +17,12 @@ export class BenchmarkService {
 
  // Headers
  httpOptions = {
-   headers: new HttpHeaders({ 'Content-Type': 'application/json','Access-Control-Allow-Origin': '*', 'Strict-origin-when-cross-origin': '*'})
- }
+   //headers: new HttpHeaders({ 'Content-Type': 'application/json','Access-Control-Allow-Origin': '*', 'Strict-origin-when-cross-origin': '*'})
+   headers: new HttpHeaders()
+    .set('Access-Control-Allow-Origin', '/')
+    .set('Referrer-Policy', 'strict-origin-when-cross-origin')
+    .set('Content-Type', 'application/json')
+  }
 
  // Obtem todos os Benchmarks
  getBenchmarks(): Observable<Benchmark[]> {
